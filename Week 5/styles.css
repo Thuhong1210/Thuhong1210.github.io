@@ -1,0 +1,29 @@
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+p {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+}
+dac-biet {
+    color: deeppink;
+    font-size:larger;
+
+}
+h2 {
+    color: darkorchid;
+    font-size: medium;
+    font-style: inherit;
+}
+
+
+p#specical {
+    background-color: lightpink;
+}
+
+.dac-biet {
+    text-decoration: line-through;
+}
