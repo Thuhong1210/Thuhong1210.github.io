@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hong Thu Nguyen's CV</title>
+  <style>
+    :root{
+      --pink:#f5a5b0;
+      --ink:#222;
+      --paper:#f4f4f4;
+      --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: Arial, sans-serif;
+      line-height:1.6;
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    /* ===== NAVBAR ===== */
+    .nav{
+      position:sticky; top:0; z-index:1000;
+      background:var(--ink); color:var(--white);
+      box-shadow:0 2px 6px rgba(0,0,0,.15);
+    }
+    .nav-inner{
+      max-width:1100px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; gap:12px;
+    }
+    .brand{font-weight:bold; letter-spacing:.2px}
+    .menu{margin-left:auto; display:flex; flex-wrap:wrap; gap:12px}
+    .menu a{
+      color:#ddd; text-decoration:none; padding:8px 10px; border-radius:8px;
+    }
+    .menu a:hover, .menu a:focus{background:rgba(255,255,255,.12); color:#fff}
+
+    /* Mobile hamburger (no JS) */
+    #nav-toggle{display:none}
+    .hamburger{
+      display:none; margin-left:auto; cursor:pointer; user-select:none;
+      padding:6px 8px; border-radius:8px; border:1px solid rgba(255,255,255,.25);
+    }
+    .hamburger:focus{outline:2px solid #fff; outline-offset:2px}
+    @media (max-width:820px){
+      .menu{display:none; flex-direction:column; width:100%; padding:10px 0}
+      #nav-toggle:checked + label + .menu{display:flex}
+      .hamburger{display:block}
+    }
+
+    /* ===== HEADER ===== */
+    header{
+      background:var(--pink); color:var(--white);
+      padding:20px; display:flex; align-items:center; gap:20px;
+    }
+    header figure{margin:0; text-align:center}
+    header img{border-radius:50%; width:120px; height:120px; object-fit:cover}
+    header h1{font-size:2.2em; margin:0}
+    header p{margin:.25rem 0}
+
+    /* ===== LAYOUT ===== */
+    main{
+      max-width:1100px; margin:20px auto; padding:0 16px;
+      display:flex; gap:20px; justify-content:space-between;
+    }
+    article, aside{
+      background:var(--white); padding:20px;
+      box-shadow:0 0 10px rgba(0,0,0,.1);
+    }
+    article{flex:0.7}
+    aside{flex:0.28}
+    @media (max-width:820px){
+      main{flex-direction:column}
+      article,aside{flex:1}
+    }
+
+    /* ===== TYPO & LISTS ===== */
+    h2{color:var(--pink); font-size:1.5em; margin-top:0}
+    ul{list-style:none; padding-left:0}
+    li{margin:8px 0}
+    time{font-style:italic}
+
+    /* ===== FOOTER ===== */
+    footer{
+      background:var(--pink); color:#fff; text-align:center; padding:12px;
+    }
+    footer a{color:#fff; text-decoration:none}
+    footer a:hover{text-decoration:underline}
+
+    /* Accessibility helpers */
+    .sr-only{
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <div class="brand">Hong Thu Nguyen</div>
+
+      <!-- hamburger (checkbox hack) -->
+      <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
+      <label class="hamburger" for="nav-toggle">☰ Menu</label>
+
+      <div class="menu" role="menubar">
+        <a href="#objective" role="menuitem">About</a>
+        <a href="#education" role="menuitem">Education</a>
+        <a href="#experience" role="menuitem">Experience</a>
+        <a href="#skills" role="menuitem">Skills</a>
+        <a href="#awards" role="menuitem">Awards</a>
+        <a href="#certs" role="menuitem">Certifications</a>
+        <a href="#interests" role="menuitem">Interests</a>
+        <a href="#references" role="menuitem">References</a>
+        <a href="#contact" role="menuitem">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <figure>
+      <img src="Thuhong.JPG" alt="Portrait of Hong Thu Nguyen">
+      <figcaption>Hong Thu Nguyen</figcaption>
+    </figure>
+    <div>
+      <h1>Student</h1>
+      <p>Hanoi, Vietnam • <a href="mailto:22071101@vnu.edu.vn">22071101@vnu.edu.vn</a> • <a href="tel:0924524699">0924524699</a></p>
+      <p><time datetime="2004-10-12">October 12, 2004</time></p>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main">
+    <article>
+      <section id="objective">
+        <h2>Objective</h2>
+        <p>I would like to express my keen interest in applying for Applied Science (Aviation) at RMIT University for the 2024 intake. With a strong passion for Applied Science (Aviation) and committed to achieving excellence in my academic pursuits, I believe that RMIT University provides the perfect environment for me to enhance my academic and career aspirations.</p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Ngo Gia Tu High School</strong> — Oct 2020 to May 2024</li>
+          <li>GPA: 8.9/10</li>
+          <li>Achievements: Secured second place in provincial-level English proficiency competition</li>
+          <li>Awarded third prize in the national contest for emerging talents in culture, arts, sports, and tourism</li>
+          <li>Earning the distinction of an excellent student for three consecutive years</li>
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <ul>
+          <li><strong>Receptionist Club of NGO Gia Tu High School</strong> — Jan 2020 to Present</li>
+          <li>Manage all club activities, including preparing events, purchasing necessary equipment, and contact organizations</li>
+        </ul>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Communication and processing</li>
+          <li>Goal setting and planning</li>
+          <li>Teamwork skills</li>
+          <li>Leadership and problem analysis ability</li>
+          <li>Ability to create and come up with ideas</li>
+          <li>Skills to use digital technology at work</li>
+        </ul>
+      </section>
+
+      <section id="awards">
+        <h2>Honors & Awards</h2>
+        <ul>
+          <li>2021: First prize (district) – Excellent English Students</li>
+          <li>2022: Second prize – Province’s Singing for Children contest</li>
+          <li>2024: Second prize (provincial) – Excellent English Students</li>
+        </ul>
+      </section>
+
+      <section id="certs">
+        <h2>Certifications</h2>
+        <ul>
+          <li>2023: IELTS 7.0</li>
+        </ul>
+      </section>
+    </article>
+
+    <aside>
+      <section id="interests">
+        <h2>Interests</h2>
+        <ul>
+          <li>Team building</li>
+          <li>Volunteering</li>
+          <li>Graphic design</li>
+          <li>Photoshop</li>
+        </ul>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <address>
+          Mai Le Phuong Loan<br />
+          RMIT University Student<br />
+          Email: <a href="mailto:loanphuongmt@gmail.com">loanphuongmt@gmail.com</a><br />
+          Mobile: <a href="tel:0922332021">0922332021</a>
+        </address>
+      </section>
+    </aside>
+  </main>
+
+  <footer id="contact">
+    <p>Contact: <a href="https://www.facebook.com/HongThuNguyen">Facebook</a> | <a href="https://www.instagram.com/Hngx__">Instagram</a></p>
+  </footer>
+</body>
+</html>
