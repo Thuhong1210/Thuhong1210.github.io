@@ -1,0 +1,83 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Product List Styling */
+.Product {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.Product img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #aaa;
+}
+
+.ProductDetails {
+    display: none;
+    text-align: center;
+}
+
+.ProductName {
+    font-weight: bold;
+}
+
+.ProductPrice {
+    font-style: italic;
+}
+
+.ProductPrice::before {
+    content: " $";
+}
+
+.Product {
+    text-align: center;
+    width: 150px;
+    margin: 0px 20px;
+    float: left;
+    cursor: pointer;
+}
+
+.Product:hover .ProductDetails {
+    display: block;
+}
+
+/* Menu Styling */
+.menu-title {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li::before {
+    content: "• ";
+    color: black;
+}
+
+.menu li:hover {
+    background-color: yellow;
+}

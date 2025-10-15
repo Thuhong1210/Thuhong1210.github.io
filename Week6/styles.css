@@ -1,0 +1,37 @@
+/* Default style for all paragraphs */
+p {
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+}
+
+/* Specific styles for different paragraphs using classes and IDs */
+.first {
+    color: red;
+}
+
+.second {
+    color: blue;
+}
+
+#third {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.fourth {
+    color: green;
+}
+
+.fifth {
+    color: purple;
+}
+
+.sixth {
+    color: orange;
+}
+
+.seventh {
+    color: pink;
+}
