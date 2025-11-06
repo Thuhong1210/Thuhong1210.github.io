@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex02</title>
+</head>
+<body>
+    <h3>Web Design and Development - Example 02</h3>
+
+    <label>Enter number A:</label>
+    <input type="text" id="a"><br><br>
+
+    <label>Enter number B:</label>
+    <input type="text" id="b"><br><br>
+
+    <button onclick="calculate()">Calculate Sum</button>
+
+    <script>
+        function calculate() {
+            // Lấy giá trị từ input
+            let txta = document.getElementById("a").value;
+            let txtb = document.getElementById("b").value;
+
+            // Kiểm tra dữ liệu hợp lệ
+            if (txta === "" || isNaN(txta)) {
+                alert("Number A is formatted incorrect");
+            } else if (txtb === "" || isNaN(txtb)) {
+                alert("Number B is formatted incorrect");
+            } else {
+                // Chuyển về số và tính tổng
+                let result = parseFloat(txta) + parseFloat(txtb);
+                alert("Result:\n" + txta + " + " + txtb + " = " + result);
+            }
+        }
+    </script>
+</body>
+</html>
