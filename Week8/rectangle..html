@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rectangle Calculator</title>
+<script language="javascript">
+    var length = prompt("Enter rectangle length:");
+    var width = prompt("Enter rectangle width:");
+
+    if (length == null || length == "" || isNaN(length)) {
+        alert("Length is invalid!");
+    } else if (width == null || width == "" || isNaN(width)) {
+        alert("Width is invalid!");
+    } else {
+        length = parseFloat(length);
+        width = parseFloat(width);
+        var perimeter = 2 * (length + width);
+        var area = length * width;
+
+        document.write("<h2>Rectangle Calculation</h2>");
+        document.write("Length = " + length + "<br>");
+        document.write("Width = " + width + "<br>");
+        document.write("Perimeter = " + perimeter + "<br>");
+        document.write("Area = " + area);
+    }
+</script>
+</head>
+<body>
+</body>
+</html>
