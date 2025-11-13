@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+<!-- Form máy tính, dùng onsubmit="return false;" để ngăn reload trang -->
 <form name="frmCal" class="calculator" onsubmit="return false;">
     <h2>MINI CALCULATOR</h2>
 
@@ -33,6 +33,7 @@
             <option value="^">^ </option>
         </select>
     </div>
+    <!--(readonly để k cho nhập) -->
 
     <div class="row">
         <label for="txtr">Result:</label>
@@ -40,6 +41,7 @@
     </div>
 
     <div class="btn-row">
+        <!-- Nút tính toán gọi hàm calculate() Minical.js -->
         <input type="button" value="Calculate" onclick="calculate()">
         <input type="reset" value="Clear"
                onclick="document.getElementById('errorMsg').textContent=''">

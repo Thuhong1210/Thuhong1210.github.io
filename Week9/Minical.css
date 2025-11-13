@@ -19,20 +19,19 @@ body{
     color:#333;
     letter-spacing: .5px;
 }
-
 .row{
-    display: flex;
+    display: flex; /* Dùng flex để label + input nằm ngang */
     align-items: center;
     margin-bottom: 12px;
 }
-
+/* Label bên trái */
 .row label{
     width: 90px;
     text-align: right;
     margin-right: 10px;
     font-size: 14px;
 }
-
+/* Input nhập số + select operator */
 .row input[type="text"],
 .row select{
     flex: 1;
@@ -45,12 +44,11 @@ body{
 .row input[readonly]{
     background:#eee;
 }
-
 .btn-row{
     text-align:center;
     margin-top:10px;
 }
-
+/* Nút bấm Calculate + Clear */
 .btn-row input{
     padding:6px 16px;
     margin:0 5px;

@@ -3,14 +3,14 @@ function calculate() {
     var b = document.frmCal.txtb;
     var o = document.frmCal.slto;
     var r = document.frmCal.txtr;
-    var err = document.getElementById("errorMsg");
+    var err = document.getElementById("errorMsg"); // Lấy vùng hiển thị lỗi
 
     // Reset lỗi + kết quả
     err.textContent = "";
     r.value = "";
 
     var av = a.value.trim();
-    var bv = b.value.trim();
+    var bv = b.value.trim();// Lấy giá trị và loại bỏ khoảng trắng
 
     // Regular expression kiểm tra số
     var numberFormat = /^[+-]?\d+(\.\d+)?$/;
@@ -18,7 +18,7 @@ function calculate() {
     // ========== VALIDATION ==========
     if (av === "" || bv === "") {
         err.textContent = "Please enter both a and b.";
-        (av === "" ? a : b).focus();
+        (av === "" ? a : b).focus();// Focus vào ô trống
         return;
     }
 
@@ -33,11 +33,11 @@ function calculate() {
         b.focus();
         return;
     }
-
+// Chuyển chuỗi sang số thực
     var x = parseFloat(av);
     var y = parseFloat(bv);
 
-    if ((o.value === "/" || o.value === "%") && y === 0) {
+    if ((o.value === "/" || o.value === "%") && y === 0) {// Kiểm tra chia cho 0
         err.textContent = "b can't be 0 for this operation.";
         b.focus();
         return;
