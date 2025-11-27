@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML DOM Events</title>
+  <link rel="stylesheet" href="/Week11/index.css">
+  
+</head>
+<body>
+
+  <h1>HTML DOM allows JavaScript to react to HTML events:</h1>
+
+  <div class="event-wrapper">
+    <div class="button-row">
+      <!-- Ô bên trái -->
+      <div class="event-box" id="mouseBox">
+        Mouse Over Me
+      </div>
+
+      <!-- Ô bên phải -->
+      <div class="event-box" id="clickBox">
+        Click Me
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Ô "Mouse Over Me": khi click vào thì đổi chữ thành "Thank You"
+    const mouseBox = document.getElementById("mouseBox");
+    mouseBox.onclick = function () {
+      mouseBox.textContent = "Thank You";
+    };
+
+    // Ô "Click Me": 
+    // 1st click: "Click me" xuống dòng "Click me again"
+    // 2nd click: "Thank You" rồi ẩn ô đỏ
+    const clickBox = document.getElementById("clickBox");
+    let clickState = 0;
+
+    clickBox.onclick = function () {
+      if (clickState === 0) {
+        clickState = 1;
+        clickBox.innerHTML = "Click me<br>Click me again";
+      } else if (clickState === 1) {
+        clickState = 2;
+        clickBox.textContent = "Thank You";
+        setTimeout(function () {
+         clickBox.style.visibility = "hidden";
+        }, 1000); // 1 giây sau thì ẩn
+      }
+    };
+  </script>
+
+</body>
+</html>
